@@ -23,3 +23,7 @@ jobs:
 
       - name: Docker push
         run: docker push sashadavinci/devops-laba:${{ github.sha }}
+
+      - name: Trigger Jenkins
+        if: success()
+        run: curl http://http://158.160.165.55:8080/job/Deploy/build?token=kldkDDh-k345j_73lkjhfdg43
