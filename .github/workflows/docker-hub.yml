@@ -22,4 +22,6 @@ jobs:
         run: docker build . -t sashadavinci/devops-laba:${{ github.sha }} -t sashadavinci/devops-laba:latest
 
       - name: Docker push
-        run: docker push sashadavinci/devops-laba:${{ github.sha }}
+        run: |
+          docker push sashadavinci/devops-laba:${{ github.sha }}
+          docker push sashadavinci/devops-laba:latest
