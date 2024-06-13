@@ -15,4 +15,9 @@ public class BasicController {
     public double divide(@RequestParam("a") double a, @RequestParam("b") double b) {
         return a / b;
     }
+
+    @GetMapping("/sum")
+    public double sum(@RequestParam("a") double a, @RequestParam("b") double b) {
+        return a + b;
+    }
 }

@@ -27,4 +27,16 @@ class BasicControllerTests {
 	void testDivision() {
 		Assertions.assertEquals(2.0, controller.divide(4, 2));
 	}
+
+	@Test
+	void testSumPositive() {
+		double actual = controller.sum(4, 2);
+		Assertions.assertEquals(6.0, actual);
+	}
+
+	@Test
+	void testSumNegatives() {
+		double actual = controller.sum(-4, 2);
+		Assertions.assertEquals(-2.0, actual);
+	}
 }
